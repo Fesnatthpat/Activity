@@ -5,156 +5,110 @@
 }
 
 body {
-    background: rgb(226, 197, 255);
-
+    background: rgb(58, 58, 58);
 }
 
 .container {
-    max-width: 50vw;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* navbar */
+.logo img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    /* border: 1px solid red; */
+}
+
 nav {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    width: 60vw;
-    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
-    /* ปรับ padding ให้เล็กลงสำหรับ navbar ขนาดเล็ก */
-    background: rgb(216, 104, 193);
-    background: linear-gradient(90deg, rgba(216, 104, 193, 1) 35%, rgb(255, 128, 236) 63%);
-    box-shadow: 0px -8px 15px 0px rgba(0, 0, 0, 0.56);
-    border-top: 1px solid #000;
-    border-radius: 15px 15px 15px 15px;
-    overflow: hidden;
-}
-
-/* Media query สำหรับหน้าจอเล็กกว่า 768px (เช่น โทรศัพท์มือถือ) */
-@media screen and (max-width: 768px) {
-    nav {
-        width: 90vw;
-        bottom: 20px;
-        /* เพิ่มความกว้างของ navbar */
-        padding: 0 10px;
-        /* ลด padding ให้เล็กลงเพื่อให้พอดีกับหน้าจอ */
-    }
-
-    .menu_center li,
-    .menu_icon li {
-        padding: 0 10px;
-        /* ลดระยะห่างระหว่างไอเทมในเมนู */
-    }
-
-    i {
-        font-size: 1.2rem;
-        /* ลดขนาดไอคอนเพื่อให้พอดีกับหน้าจอเล็ก */
-    }
-
-
-
-}
-
-/* Media query สำหรับหน้าจอเล็กกว่า 480px (จอมือถือขนาดเล็ก) */
-@media screen and (max-width: 480px) {
-    nav {
-        width: 100vw;
-        /* ใช้เต็มความกว้างของหน้าจอ */
-        padding: 0 10px;
-    }
-
-    .menu_center li,
-    .menu_icon li {
-        padding: 0 5px;
-    }
-
-    i {
-        font-size: 1rem;
-    }
-
-
-
+    position: sticky;
+    top: 0;
+    /* width: 1200px; */
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    padding: 0 20px;
+    background: rgb(19, 102, 255);
 }
 
 .menu_center,
-.menu_icon {
+.menu_r {
     display: flex;
 }
 
-li {
-    padding: 0 15px;
+.menu_center li,
+.menu_r li {
+    padding: 5px 10px;
     list-style: none;
 }
 
-a {
+.menu_center li a,
+.menu_r li a {
     text-decoration: none;
-    color: #fafafa;
-    transition: ease-out 0.3s;
+    color: #fff;
+    transition: all 0.3s;
 }
 
-a:hover {
+.menu_center li a:hover {
+    text-decoration: underline 2px;
     opacity: 0.7;
-    text-decoration: underline;
 }
 
-i {
-    font-size: 1.5rem;
-    transition: ease-out 0.3s;
+.menu_r i {
+    font-size: 20px;
+    transition: all 0.3s;
 }
 
-i:hover {
+.menu_r i:hover {
     opacity: 0.7;
 }
 
 .hero_con {
-    max-width: 100%;
+    /* border: 1px solid red; */
+    height: 400px;
     margin: 0 auto;
+    background: #fff;
 }
 
 .items_con {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    /* width: 100%; */
+    height: 100%;
 }
 
-.item_grids {
-    overflow: hidden;
-    width: 200px;
-    border: 1px solid red;
-    background: #fafafa;
+.item_l {
+    /* background: rgba(216, 112, 147, 0.452); */
+    width: 400px;
+    height: 200px;
+    border: 1px solid rgb(0, 0, 0);
 }
 
-.img_con {
-    width: 100%;
-}
-
-.img_con img {
-    object-fit: cover;
-}
-
-.detale_con span {
-    font-size: 10px;
+.item_l span {
     color: gray;
+    font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
-    .items_con {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+.item_r {
+    /* background: rgb(182, 182, 182); */
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid rgb(0, 0, 0); */
 }
 
-@media screen and (max-width: 480px) {
-    .items_con {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
+.item_r img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid rgb(0, 0, 0);
 }
